@@ -1,2 +1,8 @@
 # MC-TACO-temporal-commonsense-comprehension
 MC-TACO is a dataset of 13k question-answer pairs that require temporal commonsense comprehension. The dataset contains five temporal properties, (1) duration (how long an event takes), (2) temporal ordering (typical order of events), (3) typical time (when an event occurs), (4) frequency (how often an event occurs), and (5) stationarity (whether a state is maintained for a very long time or indefinitely). We hope that this dataset can promote the future exploration of this particular class of reasoning problems.
+
+Performance measured using two metrics:
+Exact Match -- the average number of questions for which all the candidate answers are predicted correctly.
+F1 -- which is slightly more relaxed than EM, which measures the overlap between one’s predictions and the ground truth, by forming a geometric mean of Precision-Recall measures.
+
+The basic way to train the model for prediction in case of our dataset was using the TF-IDF model as there is a lot of information available on the internet to study and implement the model. Once we were able to obtain a solution in the TF-IDF model, we switched to the BERT model since it is more complicated than the previous one. We got rid of all the errors and bugs and were able to successfully make the BERT code working. We have improved accuracy of the code to some extent. We shall try to improve the accuracy even further and also try to use higher end models once we are done. Once done, we will finally switch to the RoBERTa model as there is little information about the concepts and implementation available on the internet.
